@@ -49,7 +49,7 @@ body,
 
 body {
   font-family: var(--font-ui);
-  background: #1a1a2e;
+  background: var(--gm-bg);
   color: var(--gm-text);
   -webkit-font-smoothing: antialiased;
 }
@@ -67,7 +67,7 @@ button {
   color: inherit;
 }
 
-/* Desktop phone chrome */
+/* App shell — mobile full-bleed; desktop is a full page (not a phone frame) */
 .app-viewport {
   height: 100%;
   min-height: 100dvh;
@@ -76,18 +76,11 @@ button {
   align-items: stretch;
   padding: 0;
   overflow: hidden;
+  background: var(--gm-bg);
 }
 
-@media (min-width: 480px) {
-  .app-viewport {
-    padding: 24px 16px;
-    align-items: center;
-  }
-}
-
-.phone-shell {
+.app-shell {
   width: 100%;
-  max-width: 430px;
   height: 100%;
   max-height: 100dvh;
   background: var(--gm-bg);
@@ -95,16 +88,6 @@ button {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-}
-
-@media (min-width: 480px) {
-  .phone-shell {
-    height: min(880px, calc(100dvh - 48px));
-    max-height: min(880px, calc(100dvh - 48px));
-    border-radius: 28px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-    border: 3px solid #2a2a3a;
-  }
 }
 
 .app-main {
@@ -116,6 +99,11 @@ button {
   overscroll-behavior: contain;
 }
 
+.app-content {
+  width: 100%;
+  min-height: 100%;
+}
+
 /* Top bar — FPL compact header */
 .top-bar {
   height: var(--gm-header-h);
@@ -124,6 +112,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   padding: 0 12px;
   flex-shrink: 0;
   z-index: 20;
@@ -161,9 +150,33 @@ button {
   line-height: 1;
 }
 
+.top-bar__nav {
+  display: none;
+}
+
+.top-bar__link {
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.72);
+  border-bottom: 2px solid transparent;
+}
+
+.top-bar__link:hover {
+  color: #fff;
+}
+
+.top-bar__link--active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
 .top-bar__actions {
   display: flex;
   gap: 4px;
+  margin-left: auto;
 }
 
 .icon-btn {
@@ -1640,3 +1653,100 @@ html.dark-theme .sub-tab--active {
 .live-btn--warn { background: #ce1126; }
 
 .pitch-player { cursor: pointer; text-decoration: none; color: inherit; }
+
+/* —— Desktop / PC layout —— */
+@media (min-width: 900px) {
+  :root {
+    --gm-header-h: 56px;
+  }
+
+  .top-bar {
+    padding: 0 28px;
+    height: var(--gm-header-h);
+  }
+
+  .top-bar__nav {
+    display: flex;
+    align-items: stretch;
+    gap: 4px;
+    height: 100%;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .top-bar__actions {
+    margin-left: 0;
+  }
+
+  .top-bar-slot--mobile-hidden {
+    display: block;
+  }
+
+  .bottom-nav {
+    display: none;
+  }
+
+  .app-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px 40px;
+  }
+
+  .secondary-strip,
+  .date-strip {
+    border-radius: 0;
+  }
+
+  .page-title {
+    padding-top: 20px;
+    font-size: 1.45rem;
+  }
+
+  .match-row {
+    padding: 14px 16px;
+    min-height: 60px;
+  }
+
+  .match-row:hover {
+    background: var(--gm-bg);
+  }
+
+  .match-row__name {
+    font-size: 0.95rem;
+  }
+
+  .league-group__header {
+    padding: 12px 16px;
+    font-size: 0.8rem;
+  }
+
+  /* Two-column news list under featured */
+  .app-content:has(> .news-featured) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-content: start;
+  }
+
+  .app-content:has(> .news-featured) > .page-title,
+  .app-content:has(> .news-featured) > .news-featured {
+    grid-column: 1 / -1;
+  }
+
+  .onboard {
+    max-width: 720px;
+    margin: 0 auto;
+    border-left: 1px solid var(--gm-border);
+    border-right: 1px solid var(--gm-border);
+  }
+
+  .list-item:hover {
+    background: rgba(12, 28, 140, 0.04);
+  }
+}
+
+@media (max-width: 899px) {
+  .top-bar-slot--mobile-hidden {
+    display: none;
+  }
+}

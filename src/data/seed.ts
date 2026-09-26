@@ -17,6 +17,7 @@ import {
   buildExtraTeams,
   extraCompetitions,
 } from './extraSeed'
+import { playerPhotoUrl } from './playerPhotos'
 
 const coreCompetitions: Competition[] = [
   {
@@ -250,7 +251,7 @@ const mkPlayers = (
       | 'Left'
       | 'Right'
       | 'Both',
-    photoUrl: `/images/players/${prefix}${i + 1}.svg`,
+    photoUrl: playerPhotoUrl(`${prefix}${i + 1}`),
     career: [
       {
         teamId,

@@ -7,6 +7,7 @@ import type {
   StandingRow,
   Team,
 } from '../types'
+import { playerPhotoUrl } from './playerPhotos'
 
 /** Extra competitions beyond the core five */
 export const extraCompetitions: Competition[] = [
@@ -176,7 +177,7 @@ function makeSquad(team: TeamDef, women: boolean): Player[] {
       dob: `199${(h % 9) + 1}-0${(h % 9) + 1}-${10 + (h % 18)}`,
       heightCm: women ? 158 + (h % 18) : 168 + (h % 22),
       preferredFoot: (['Left', 'Right', 'Both'] as const)[h % 3],
-      photoUrl: `/images/players/${id}.svg`,
+      photoUrl: playerPhotoUrl(id),
       career: [{ teamId: team.id, from: '2023', to: null, jerseyNumber: numbers[i] }],
     })
   }
