@@ -28,7 +28,7 @@ export function MyMatchesPage() {
 
   return (
     <>
-      <div className="page-title">My Matches</div>
+      <div className="page-title">Favourites</div>
       {favouriteTeamIds.length === 0 && favouriteCompetitionIds.length === 0 && (
         <div className="empty-state">
           Star teams on their pages or complete onboarding to see fixtures here.

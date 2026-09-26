@@ -32,7 +32,16 @@ Open [http://localhost:5173/](http://localhost:5173/) → redirects to fan app (
 
 ## Notes
 
-Clickable React demo with mock data (not Flutter/Firebase production). Images use Unsplash (news) and avatar services (players/crests) for the demo.
+Clickable React demo with mock data (not Flutter/Firebase production).
+
+**Expanded catalogue (approx.):**
+- 10 competitions (national 1st–3rd, women’s 1st–2nd, 4 zonal leagues, U-20)
+- 50+ clubs across Greater Banjul and the regions
+- 800+ player profiles
+- 100+ fixtures across past / today / upcoming days
+- 14 news articles with Gambian stadium and match photography
+
+News photos are from Wikimedia Commons (Independence Stadium Bakau, Gambia v Guinea, Banjul). Team crests and player avatars use Gambian flag colours.
 
 ## Stack
 

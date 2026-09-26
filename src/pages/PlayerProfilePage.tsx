@@ -100,7 +100,6 @@ export function PlayerProfilePage() {
           <div className="list-item__title">{team.name}</div>
           <div className="list-item__meta">{team.city}</div>
         </div>
-        <span className="list-item__chevron">›</span>
       </Link>
 
       <div className="panel__title">Career</div>
@@ -128,7 +127,6 @@ export function PlayerProfilePage() {
                 <div className="list-item__title">{n.title}</div>
                 <div className="list-item__meta">{n.category}</div>
               </div>
-              <span className="list-item__chevron">›</span>
             </Link>
           ))}
         </>

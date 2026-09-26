@@ -15,22 +15,18 @@ export function MorePage() {
             {fanUser ? `${fanUser.provider} · sync favourites` : 'Phone, Google or Apple (optional)'}
           </div>
         </div>
-        <span className="list-item__chevron">›</span>
       </Link>
 
       <Link to="/app/search" className="list-item">
         <div className="list-item__title">Search</div>
-        <span className="list-item__chevron">›</span>
       </Link>
 
       <Link to="/app/archive" className="list-item">
         <div className="list-item__title">Match archive</div>
-        <span className="list-item__chevron">›</span>
       </Link>
 
       <Link to="/app/notifications" className="list-item">
         <div className="list-item__title">Notification preferences</div>
-        <span className="list-item__chevron">›</span>
       </Link>
 
       <div className="settings-row">

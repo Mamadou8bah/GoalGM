@@ -131,6 +131,7 @@ button {
 
 .top-bar__brand {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 8px;
   font-family: var(--font-condensed);
@@ -138,11 +139,14 @@ button {
   font-size: 1.35rem;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .top-bar__mark {
   width: 28px;
   height: 28px;
+  flex-shrink: 0;
   border-radius: 4px;
   background: linear-gradient(180deg, var(--gm-red) 0%, var(--gm-red) 33%, #fff 33%, #fff 40%, var(--gm-blue) 40%, var(--gm-blue) 60%, #fff 60%, #fff 67%, var(--gm-green) 67%);
   display: grid;
@@ -151,6 +155,10 @@ button {
   font-weight: 700;
   color: #fff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.top-bar__name {
+  line-height: 1;
 }
 
 .top-bar__actions {
@@ -196,20 +204,22 @@ button {
 
 .chip {
   flex-shrink: 0;
-  padding: 5px 12px;
+  padding: 5px 12px 4px;
   font-size: 0.72rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.7);
-  border-radius: var(--gm-radius);
-  border: 1px solid transparent;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
 }
 
 .chip--active {
   color: #fff;
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.25);
+  background: transparent;
+  border-bottom-color: #fff;
 }
 
 /* Bottom nav — pinned in shell flex layout */
@@ -1348,13 +1358,26 @@ html.dark-theme .sub-tab--active {
   padding: 32px 20px 24px;
   text-align: center;
 }
+.onboard__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
 .onboard__hero h1 {
   font-family: var(--font-condensed);
   font-size: 2rem;
-  margin: 12px 0 6px;
+  margin: 0;
   text-transform: uppercase;
+  line-height: 1;
 }
-.onboard__hero p { margin: 0; opacity: 0.85; font-size: 0.9rem; }
+.onboard__hero p {
+  margin: 12px auto 0;
+  opacity: 0.85;
+  font-size: 0.9rem;
+  max-width: 28ch;
+  line-height: 1.4;
+}
 .onboard__body { padding: 12px; padding-bottom: 32px; }
 .onboard__body h2 {
   font-family: var(--font-condensed);
@@ -1541,10 +1564,18 @@ html.dark-theme .sub-tab--active {
   flex-direction: column;
   gap: 12px;
 }
+.admin-login__brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
 .admin-login__card h1 {
   font-family: var(--font-condensed);
   margin: 0;
   text-transform: uppercase;
+  line-height: 1;
 }
 .admin-login__card > p { margin: 0; color: #666; font-size: 0.85rem; }
 .admin-label { display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem; font-weight: 600; margin: 8px 0; }

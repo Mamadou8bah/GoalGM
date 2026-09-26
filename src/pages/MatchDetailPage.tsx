@@ -290,7 +290,6 @@ export function MatchDetailPage() {
                   </div>
                   <div className="list-item__meta">{formatMatchDate(m.kickoff)}</div>
                 </div>
-                <span className="list-item__chevron">›</span>
               </Link>
             )
           })}

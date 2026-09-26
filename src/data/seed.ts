@@ -9,8 +9,16 @@ import type {
   StaffUser,
   Team,
 } from '../types'
+import {
+  buildExtraMatches,
+  buildExtraNews,
+  buildExtraPlayers,
+  buildExtraStandings,
+  buildExtraTeams,
+  extraCompetitions,
+} from './extraSeed'
 
-export const competitions: Competition[] = [
+const coreCompetitions: Competition[] = [
   {
     id: 'gfa-men-1',
     name: 'GFA League First Division',
@@ -68,12 +76,13 @@ export const competitions: Competition[] = [
   },
 ]
 
-function teamLogo(short: string, color: string) {
-  const bg = color.replace('#', '')
-  return `https://ui-avatars.com/api/?name=${encodeURIComponent(short.slice(0, 3))}&background=${bg}&color=fff&rounded=true&bold=true&size=128&format=png`
+export const competitions: Competition[] = [...coreCompetitions, ...extraCompetitions]
+
+function teamLogo(id: string) {
+  return `/images/teams/${id}.svg`
 }
 
-export const teams: Team[] = [
+const coreTeams: Team[] = [
   {
     id: 'rdb',
     name: 'Real de Banjul',
@@ -83,7 +92,7 @@ export const teams: Team[] = [
     founded: 1966,
     coach: 'Alhagie Sowe',
     color: '#CE1126',
-    logoUrl: teamLogo('RDB', '#CE1126'),
+    logoUrl: teamLogo('rdb'),
     competitionIds: ['gfa-men-1'],
   },
   {
@@ -95,7 +104,7 @@ export const teams: Team[] = [
     founded: 1974,
     coach: 'Modou Lamin Colley',
     color: '#0C1C8C',
-    logoUrl: teamLogo('HWK', '#0C1C8C'),
+    logoUrl: teamLogo('hawks'),
     competitionIds: ['gfa-men-1'],
   },
   {
@@ -107,7 +116,7 @@ export const teams: Team[] = [
     founded: 2012,
     coach: 'Sang Ndong',
     color: '#3A7728',
-    logoUrl: teamLogo('FOR', '#3A7728'),
+    logoUrl: teamLogo('fortune'),
     competitionIds: ['gfa-men-1'],
   },
   {
@@ -119,7 +128,7 @@ export const teams: Team[] = [
     founded: 2003,
     coach: 'Omar Colley',
     color: '#e67e22',
-    logoUrl: teamLogo('BRI', '#e67e22'),
+    logoUrl: teamLogo('brikama'),
     competitionIds: ['gfa-men-1'],
   },
   {
@@ -131,7 +140,7 @@ export const teams: Team[] = [
     founded: 1969,
     coach: 'Mustapha Kebbeh',
     color: '#1abc9c',
-    logoUrl: teamLogo('WAL', '#1abc9c'),
+    logoUrl: teamLogo('wallidan'),
     competitionIds: ['gfa-men-1'],
   },
   {
@@ -143,7 +152,7 @@ export const teams: Team[] = [
     founded: 1998,
     coach: 'Ebou Faye',
     color: '#8e44ad',
-    logoUrl: teamLogo('GMT', '#8e44ad'),
+    logoUrl: teamLogo('gamtel'),
     competitionIds: ['gfa-men-1'],
   },
   {
@@ -155,7 +164,7 @@ export const teams: Team[] = [
     founded: 2015,
     coach: 'Lamin Jallow',
     color: '#2980b9',
-    logoUrl: teamLogo('TBJ', '#2980b9'),
+    logoUrl: teamLogo('team-bj'),
     competitionIds: ['gfa-men-2'],
   },
   {
@@ -167,7 +176,7 @@ export const teams: Team[] = [
     founded: 1980,
     coach: 'Pa Alieu Ndow',
     color: '#2c3e50',
-    logoUrl: teamLogo('AF', '#2c3e50'),
+    logoUrl: teamLogo('armed'),
     competitionIds: ['gfa-men-2'],
   },
   {
@@ -179,7 +188,7 @@ export const teams: Team[] = [
     founded: 2008,
     coach: 'Fatou Ceesay',
     color: '#CE1126',
-    logoUrl: teamLogo('QC', '#CE1126'),
+    logoUrl: teamLogo('queen-c'),
     competitionIds: ['gfa-women-1'],
   },
   {
@@ -191,7 +200,7 @@ export const teams: Team[] = [
     founded: 2011,
     coach: 'Awa Njie',
     color: '#c0392b',
-    logoUrl: teamLogo('RS', '#c0392b'),
+    logoUrl: teamLogo('red-sab'),
     competitionIds: ['gfa-women-1'],
   },
   {
@@ -203,7 +212,7 @@ export const teams: Team[] = [
     founded: 2005,
     coach: 'Mariama Barrow',
     color: '#0C1C8C',
-    logoUrl: teamLogo('POL', '#0C1C8C'),
+    logoUrl: teamLogo('police-w'),
     competitionIds: ['gfa-women-1'],
   },
   {
@@ -215,10 +224,12 @@ export const teams: Team[] = [
     founded: 2010,
     coach: 'Isatou Camara',
     color: '#3A7728',
-    logoUrl: teamLogo('GPT', '#3A7728'),
+    logoUrl: teamLogo('gambia-p'),
     competitionIds: ['gfa-women-1'],
   },
 ]
+
+export const teams: Team[] = [...coreTeams, ...buildExtraTeams()]
 
 const mkPlayers = (
   teamId: string,
@@ -239,7 +250,7 @@ const mkPlayers = (
       | 'Left'
       | 'Right'
       | 'Both',
-    photoUrl: `https://i.pravatar.cc/150?u=${prefix}${i + 1}`,
+    photoUrl: `/images/players/${prefix}${i + 1}.svg`,
     career: [
       {
         teamId,
@@ -250,7 +261,7 @@ const mkPlayers = (
     ],
   }))
 
-export const players: Player[] = [
+const corePlayers: Player[] = [
   ...mkPlayers('rdb', 'rdb', [
     ['Alieu Jallow', 'Jallow', 'GK', 1],
     ['Ousman Darboe', 'Darboe', 'DEF', 2],
@@ -389,6 +400,8 @@ export const players: Player[] = [
   ]),
 ]
 
+export const players: Player[] = [...corePlayers, ...buildExtraPlayers()]
+
 function starters(
   teamId: string,
   ids: string[],
@@ -424,7 +437,7 @@ function bench(teamId: string, ids: string[]): Match['lineups'] {
 /** Prototype “today” — aligns with seeded fixture dates */
 export const PROTOTYPE_TODAY = '2026-09-26'
 
-export const matches: Match[] = [
+const coreMatches: Match[] = [
   {
     id: 'm1',
     competitionId: 'gfa-men-1',
@@ -705,7 +718,9 @@ export const matches: Match[] = [
   },
 ]
 
-export const standingsByCompetition: Record<string, StandingRow[]> = {
+export const matches: Match[] = [...coreMatches, ...buildExtraMatches(PROTOTYPE_TODAY)]
+
+const coreStandings: Record<string, StandingRow[]> = {
   'gfa-men-1': [
     { teamId: 'rdb', played: 7, won: 5, drawn: 1, lost: 1, gf: 14, ga: 6, gd: 8, pts: 16, form: ['W', 'W', 'D', 'W', 'W'] },
     { teamId: 'hawks', played: 7, won: 4, drawn: 2, lost: 1, gf: 11, ga: 7, gd: 4, pts: 14, form: ['D', 'W', 'W', 'L', 'W'] },
@@ -726,7 +741,31 @@ export const standingsByCompetition: Record<string, StandingRow[]> = {
   ],
 }
 
-export const news: NewsArticle[] = [
+export const standingsByCompetition: Record<string, StandingRow[]> = {
+  ...buildExtraStandings(),
+  ...coreStandings,
+  // keep core First Division order preferred for demo
+  'gfa-men-1': [
+    ...coreStandings['gfa-men-1'],
+    ...(buildExtraStandings()['gfa-men-1'] ?? []).filter(
+      (r) => !['rdb', 'hawks', 'fortune', 'wallidan', 'brikama', 'gamtel'].includes(r.teamId),
+    ),
+  ],
+  'gfa-men-2': [
+    ...coreStandings['gfa-men-2'],
+    ...(buildExtraStandings()['gfa-men-2'] ?? []).filter(
+      (r) => !['armed', 'team-bj'].includes(r.teamId),
+    ),
+  ],
+  'gfa-women-1': [
+    ...coreStandings['gfa-women-1'],
+    ...(buildExtraStandings()['gfa-women-1'] ?? []).filter(
+      (r) => !['queen-c', 'police-w', 'red-sab', 'gambia-p'].includes(r.teamId),
+    ),
+  ],
+}
+
+const coreNews: NewsArticle[] = [
   {
     id: 'n1',
     title: 'Real de Banjul edge Hawks in fiery Box Bar derby',
@@ -735,8 +774,7 @@ export const news: NewsArticle[] = [
     author: 'Fatou Jallow',
     publishedAt: '2026-09-26T16:45:00+00:00',
     imageColor: '#CE1126',
-    imageUrl:
-      'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80&auto=format&fit=crop',
+    imageUrl: '/images/news/gambia-v-guinea.jpg',
     featured: true,
     teamIds: ['rdb', 'hawks'],
     competitionIds: ['gfa-men-1'],
@@ -749,8 +787,7 @@ export const news: NewsArticle[] = [
     author: 'Lamin Ceesay',
     publishedAt: '2026-09-25T10:00:00+00:00',
     imageColor: '#0C1C8C',
-    imageUrl:
-      'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&q=80&auto=format&fit=crop',
+    imageUrl: '/images/news/independence-stadium.jpg',
     playerIds: ['rdb8'],
     teamIds: ['rdb'],
     competitionIds: ['gfa-men-1'],
@@ -763,8 +800,7 @@ export const news: NewsArticle[] = [
     author: 'Awa Njie',
     publishedAt: '2026-09-26T15:40:00+00:00',
     imageColor: '#3A7728',
-    imageUrl:
-      'https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=800&q=80&auto=format&fit=crop',
+    imageUrl: '/images/news/independence-stadium-2.jpg',
     teamIds: ['queen-c', 'red-sab'],
     competitionIds: ['gfa-women-1'],
   },
@@ -776,11 +812,12 @@ export const news: NewsArticle[] = [
     author: 'Goal GM Desk',
     publishedAt: '2026-09-24T09:30:00+00:00',
     imageColor: '#2c3e50',
-    imageUrl:
-      'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800&q=80&auto=format&fit=crop',
+    imageUrl: '/images/news/banjul-boxbar.jpg',
     competitionIds: ['gfa-men-1', 'gfa-men-2'],
   },
 ]
+
+export const news: NewsArticle[] = [...coreNews, ...buildExtraNews(PROTOTYPE_TODAY)]
 
 export function getTeam(id: string) {
   const team = teams.find((t) => t.id === id)

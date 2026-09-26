@@ -14,7 +14,7 @@ const items = [
   },
   {
     to: '/app/my-matches',
-    label: 'My Matches',
+    label: 'Favourites',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M12 17.3l-5.4 3 1.4-6.1L3.5 9.9l6.2-.5L12 3.5l2.3 5.9 6.2.5-4.5 4.3 1.4 6.1z" />

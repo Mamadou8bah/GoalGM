@@ -29,17 +29,19 @@ export function OnboardingPage() {
   return (
     <div className="onboard">
       <div className="onboard__hero">
-        <div className="top-bar__mark" style={{ width: 48, height: 48, fontSize: '0.9rem' }}>
-          GM
+        <div className="onboard__brand">
+          <div className="top-bar__mark" style={{ width: 48, height: 48, fontSize: '0.9rem' }}>
+            GM
+          </div>
+          <h1>Goal GM</h1>
         </div>
-        <h1>Goal GM</h1>
         <p>The complete source for Gambian football — every division, every match.</p>
       </div>
 
       {step === 0 && (
         <div className="onboard__body">
           <h2>Choose your leagues</h2>
-          <p className="onboard__hint">Follow competitions for My Matches & alerts</p>
+          <p className="onboard__hint">Follow competitions for Favourites & alerts</p>
           {competitions.map((c) => (
             <button
               key={c.id}

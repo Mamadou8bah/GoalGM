@@ -16,7 +16,6 @@ export function CompetitionsPage() {
               {c.region ? ` · ${c.region}` : ''} · {c.season}
             </div>
           </div>
-          <span className="list-item__chevron">›</span>
         </Link>
       ))}
     </>

@@ -49,7 +49,6 @@ export function SearchPage() {
                 <div className="list-item__title">{t.name}</div>
                 <div className="list-item__meta">{t.city}</div>
               </div>
-              <span className="list-item__chevron">›</span>
             </Link>
           ))}
 
@@ -60,7 +59,6 @@ export function SearchPage() {
                 <div className="list-item__title">{c.name}</div>
                 <div className="list-item__meta">{c.season}</div>
               </div>
-              <span className="list-item__chevron">›</span>
             </Link>
           ))}
 
@@ -75,7 +73,6 @@ export function SearchPage() {
                     {team.shortName} · {p.position} · #{p.jerseyNumber}
                   </div>
                 </div>
-                <span className="list-item__chevron">›</span>
               </Link>
             )
           })}
@@ -87,7 +84,6 @@ export function SearchPage() {
                 <div className="list-item__title">{n.title}</div>
                 <div className="list-item__meta">{n.category}</div>
               </div>
-              <span className="list-item__chevron">›</span>
             </Link>
           ))}
 

@@ -29,7 +29,7 @@ export function AdminLiveList() {
                 {m.minute != null ? ` · ${m.minute}'` : ''}
               </div>
             </div>
-            <span>Open →</span>
+            <span>Open</span>
           </Link>
         ))}
       </div>

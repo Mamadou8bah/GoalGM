@@ -116,7 +116,6 @@ export function TeamPage() {
                 <div className="list-item__title">{n.title}</div>
                 <div className="list-item__meta">{n.category}</div>
               </div>
-              <span className="list-item__chevron">›</span>
             </Link>
           ))}
         </>

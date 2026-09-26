@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><clipPath id="c"><circle cx="64" cy="64" r="64"/></clipPath></defs>
+  <g clip-path="url(#c)">
+    <rect width="128" height="42" fill="#CE1126"/>
+    <rect y="42" width="128" height="8" fill="#fff"/>
+    <rect y="50" width="128" height="28" fill="#0C1C8C"/>
+    <rect y="78" width="128" height="8" fill="#fff"/>
+    <rect y="86" width="128" height="42" fill="#3A7728"/>
+  </g>
+  <circle cx="64" cy="58" r="26" fill="rgba(0,0,0,0.4)"/>
+  <text x="64" y="66" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">BA</text>
+  <circle cx="96" cy="96" r="18" fill="#0C1C8C" stroke="#fff" stroke-width="3"/>
+  <text x="96" y="102" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="14" font-weight="700" fill="#fff">4</text>
+</svg>

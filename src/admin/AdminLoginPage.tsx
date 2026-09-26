@@ -13,10 +13,12 @@ export function AdminLoginPage() {
   return (
     <div className="admin-login">
       <div className="admin-login__card">
-        <div className="top-bar__mark" style={{ width: 44, height: 44 }}>
-          GM
+        <div className="admin-login__brand">
+          <div className="top-bar__mark" style={{ width: 44, height: 44 }}>
+            GM
+          </div>
+          <h1>Goal GM Admin</h1>
         </div>
-        <h1>Goal GM Admin</h1>
         <p>Secure staff panel for score reporters, data & news editors</p>
         <label className="admin-label">
           Staff email

@@ -5,7 +5,7 @@ export function TopBar({ showSearch = true }: { showSearch?: boolean }) {
     <header className="top-bar">
       <Link to="/app" className="top-bar__brand">
         <span className="top-bar__mark">GM</span>
-        Goal GM
+        <span className="top-bar__name">Goal GM</span>
       </Link>
       <div className="top-bar__actions">
         {showSearch && (

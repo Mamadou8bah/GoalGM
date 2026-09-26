@@ -88,7 +88,7 @@ export function HomePage() {
           <section key={compId} className="league-group">
             <Link to={`/app/competitions/${compId}`} className="league-group__header">
               {comp.shortName}
-              <span>{comp.season} ›</span>
+              <span>{comp.season}</span>
             </Link>
             <div className="league-group__list">
               {list.map((m) => (
