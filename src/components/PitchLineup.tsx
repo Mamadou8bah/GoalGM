@@ -15,14 +15,16 @@ function PlayerChip({ entry, color }: { entry: LineupEntry; color: string }) {
   const player = getPlayer(entry.playerId)
   return (
     <Link to={`/app/player/${entry.playerId}`} className="pitch-player">
-      <div className="pitch-player__kit" style={{ borderColor: color }}>
-        {player?.photoUrl ? (
-          <img src={player.photoUrl} alt="" className="pitch-player__photo" />
-        ) : (
-          <span className="pitch-player__num" style={{ background: color }}>
-            {entry.jerseyNumber}
-          </span>
-        )}
+      <div className="pitch-player__avatar">
+        <div className="pitch-player__kit" style={{ borderColor: color }}>
+          {player?.photoUrl ? (
+            <img src={player.photoUrl} alt="" className="pitch-player__photo" />
+          ) : (
+            <span className="pitch-player__num" style={{ background: color }}>
+              {entry.jerseyNumber}
+            </span>
+          )}
+        </div>
         <span className="pitch-player__badge" style={{ background: color }}>
           {entry.jerseyNumber}
         </span>
