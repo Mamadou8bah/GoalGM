@@ -12,7 +12,7 @@ import { playerPhotoUrl } from './playerPhotos'
 /** Extra competitions beyond the core five */
 export const extraCompetitions: Competition[] = [
   {
-    id: 'gfa-women-2',
+    id: 'gff-women-2',
     name: "Women's Second Division",
     shortName: "Women's Second Div",
     gender: 'women',
@@ -56,8 +56,8 @@ export const extraCompetitions: Competition[] = [
     tieBreak: 'gd',
   },
   {
-    id: 'gfa-u20',
-    name: 'GFA U-20 Championship',
+    id: 'gff-u20',
+    name: 'GFF U-20 Championship',
     shortName: 'U-20 Championship',
     gender: 'men',
     division: '3rd',
@@ -81,24 +81,24 @@ type TeamDef = {
 
 const EXTRA_TEAM_DEFS: TeamDef[] = [
   // Men 1st — fill out the table
-  { id: 'bombada', name: 'Bombada FC', shortName: 'Bombada', city: 'Brikama', stadium: 'Bombada Ground', founded: 1999, coach: 'Lamin Darboe', color: '#16a085', competitionIds: ['gfa-men-1'] },
-  { id: 'steve-b', name: 'Steve Biko FC', shortName: 'Biko', city: 'Bakau', stadium: 'Biko Park', founded: 1978, coach: 'Ebou Jarju', color: '#27ae60', competitionIds: ['gfa-men-1'] },
-  { id: 'gpasa', name: 'GPA FC', shortName: 'GPA', city: 'Banjul', stadium: 'Ports Authority', founded: 1985, coach: 'Pa Modou Bojang', color: '#2980b9', competitionIds: ['gfa-men-1'] },
-  { id: 'marimoo', name: 'Marimoo FC', shortName: 'Marimoo', city: 'Brufut', stadium: 'Marimoo Field', founded: 2001, coach: 'Omar Jallow', color: '#8e44ad', competitionIds: ['gfa-men-1'] },
+  { id: 'bombada', name: 'Bombada FC', shortName: 'Bombada', city: 'Brikama', stadium: 'Bombada Ground', founded: 1999, coach: 'Lamin Darboe', color: '#16a085', competitionIds: ['gff-men-1'] },
+  { id: 'steve-b', name: 'Steve Biko FC', shortName: 'Biko', city: 'Bakau', stadium: 'Biko Park', founded: 1978, coach: 'Ebou Jarju', color: '#27ae60', competitionIds: ['gff-men-1'] },
+  { id: 'gpasa', name: 'GPA FC', shortName: 'GPA', city: 'Banjul', stadium: 'Ports Authority', founded: 1985, coach: 'Pa Modou Bojang', color: '#2980b9', competitionIds: ['gff-men-1'] },
+  { id: 'marimoo', name: 'Marimoo FC', shortName: 'Marimoo', city: 'Brufut', stadium: 'Marimoo Field', founded: 2001, coach: 'Omar Jallow', color: '#8e44ad', competitionIds: ['gff-men-1'] },
   // Men 2nd
-  { id: 'banjul-u', name: 'Banjul United', shortName: 'Banjul Utd', city: 'Banjul', stadium: 'Box Bar Pitch 2', founded: 1992, coach: 'Alieu Njie', color: '#c0392b', competitionIds: ['gfa-men-2'] },
-  { id: 'serrekunda', name: 'Serrekunda United', shortName: 'SK United', city: 'Serrekunda', stadium: 'SK Mini Stadium', founded: 2004, coach: 'Modou Lamin Faye', color: '#d35400', competitionIds: ['gfa-men-2'] },
-  { id: 'kololi', name: 'Kololi FC', shortName: 'Kololi', city: 'Kololi', stadium: 'Kololi Ground', founded: 2008, coach: 'Sainey Camara', color: '#1abc9c', competitionIds: ['gfa-men-2'] },
-  { id: 'bakau', name: 'Bakau United', shortName: 'Bakau', city: 'Bakau', stadium: 'Bakau Stadium', founded: 1995, coach: 'Yankuba Ceesay', color: '#34495e', competitionIds: ['gfa-men-2'] },
-  { id: 'fajara', name: 'Fajara FC', shortName: 'Fajara', city: 'Fajara', stadium: 'Fajara Oval', founded: 2010, coach: 'Bubacarr Sowe', color: '#e74c3c', competitionIds: ['gfa-men-2'] },
-  { id: 'latrikunda', name: 'Latrikunda United', shortName: 'Latrikunda', city: 'Latrikunda', stadium: 'Latrikunda Field', founded: 2006, coach: 'Assan Touray', color: '#9b59b6', competitionIds: ['gfa-men-2'] },
+  { id: 'banjul-u', name: 'Banjul United', shortName: 'Banjul Utd', city: 'Banjul', stadium: 'Box Bar Pitch 2', founded: 1992, coach: 'Alieu Njie', color: '#c0392b', competitionIds: ['gff-men-2'] },
+  { id: 'serrekunda', name: 'Serrekunda United', shortName: 'SK United', city: 'Serrekunda', stadium: 'SK Mini Stadium', founded: 2004, coach: 'Modou Lamin Faye', color: '#d35400', competitionIds: ['gff-men-2'] },
+  { id: 'kololi', name: 'Kololi FC', shortName: 'Kololi', city: 'Kololi', stadium: 'Kololi Ground', founded: 2008, coach: 'Sainey Camara', color: '#1abc9c', competitionIds: ['gff-men-2'] },
+  { id: 'bakau', name: 'Bakau United', shortName: 'Bakau', city: 'Bakau', stadium: 'Bakau Stadium', founded: 1995, coach: 'Yankuba Ceesay', color: '#34495e', competitionIds: ['gff-men-2'] },
+  { id: 'fajara', name: 'Fajara FC', shortName: 'Fajara', city: 'Fajara', stadium: 'Fajara Oval', founded: 2010, coach: 'Bubacarr Sowe', color: '#e74c3c', competitionIds: ['gff-men-2'] },
+  { id: 'latrikunda', name: 'Latrikunda United', shortName: 'Latrikunda', city: 'Latrikunda', stadium: 'Latrikunda Field', founded: 2006, coach: 'Assan Touray', color: '#9b59b6', competitionIds: ['gff-men-2'] },
   // Men 3rd
-  { id: 'brufut', name: 'Brufut United', shortName: 'Brufut', city: 'Brufut', stadium: 'Brufut Ground', founded: 2012, coach: 'Lamin Saidy', color: '#2ecc71', competitionIds: ['gfa-men-3'] },
-  { id: 'sukuta', name: 'Sukuta Tigers', shortName: 'Sukuta', city: 'Sukuta', stadium: 'Tigers Park', founded: 2014, coach: 'Ebrima Colley', color: '#f39c12', competitionIds: ['gfa-men-3'] },
-  { id: 'busumbala', name: 'Busumbala FC', shortName: 'Busumbala', city: 'Busumbala', stadium: 'Busumbala Pitch', founded: 2011, coach: 'Pa Alieu Bah', color: '#3498db', competitionIds: ['gfa-men-3'] },
-  { id: 'wellingara', name: 'Wellingara Stars', shortName: 'Wellingara', city: 'Wellingara', stadium: 'Stars Ground', founded: 2013, coach: 'Musa Jallow', color: '#e67e22', competitionIds: ['gfa-men-3'] },
-  { id: 'talinding', name: 'Talinding FC', shortName: 'Talinding', city: 'Talinding', stadium: 'Talinding Oval', founded: 2009, coach: 'Alhagie Sanyang', color: '#1abc9c', competitionIds: ['gfa-men-3'] },
-  { id: 'jabang', name: 'Jabang FC', shortName: 'Jabang', city: 'Jabang', stadium: 'Jabang Field', founded: 2015, coach: 'Omar Sanneh', color: '#c0392b', competitionIds: ['gfa-men-3'] },
+  { id: 'brufut', name: 'Brufut United', shortName: 'Brufut', city: 'Brufut', stadium: 'Brufut Ground', founded: 2012, coach: 'Lamin Saidy', color: '#2ecc71', competitionIds: ['gff-men-3'] },
+  { id: 'sukuta', name: 'Sukuta Tigers', shortName: 'Sukuta', city: 'Sukuta', stadium: 'Tigers Park', founded: 2014, coach: 'Ebrima Colley', color: '#f39c12', competitionIds: ['gff-men-3'] },
+  { id: 'busumbala', name: 'Busumbala FC', shortName: 'Busumbala', city: 'Busumbala', stadium: 'Busumbala Pitch', founded: 2011, coach: 'Pa Alieu Bah', color: '#3498db', competitionIds: ['gff-men-3'] },
+  { id: 'wellingara', name: 'Wellingara Stars', shortName: 'Wellingara', city: 'Wellingara', stadium: 'Stars Ground', founded: 2013, coach: 'Musa Jallow', color: '#e67e22', competitionIds: ['gff-men-3'] },
+  { id: 'talinding', name: 'Talinding FC', shortName: 'Talinding', city: 'Talinding', stadium: 'Talinding Oval', founded: 2009, coach: 'Alhagie Sanyang', color: '#1abc9c', competitionIds: ['gff-men-3'] },
+  { id: 'jabang', name: 'Jabang FC', shortName: 'Jabang', city: 'Jabang', stadium: 'Jabang Field', founded: 2015, coach: 'Omar Sanneh', color: '#c0392b', competitionIds: ['gff-men-3'] },
   // West Coast zone
   { id: 'gunjur', name: 'Gunjur United', shortName: 'Gunjur', city: 'Gunjur', stadium: 'Gunjur Stadium', founded: 2007, coach: 'Dawda Jobe', color: '#27ae60', competitionIds: ['zone-west'] },
   { id: 'sanyang', name: 'Sanyang FC', shortName: 'Sanyang', city: 'Sanyang', stadium: 'Sanyang Ground', founded: 2010, coach: 'Lamin Kanteh', color: '#2980b9', competitionIds: ['zone-west'] },
@@ -120,17 +120,17 @@ const EXTRA_TEAM_DEFS: TeamDef[] = [
   { id: 'fatoto', name: 'Fatoto Stars', shortName: 'Fatoto', city: 'Fatoto', stadium: 'Fatoto Field', founded: 2009, coach: 'Musa Darboe', color: '#3498db', competitionIds: ['zone-upper'] },
   { id: 'diabugu', name: 'Diabugu FC', shortName: 'Diabugu', city: 'Diabugu', stadium: 'Diabugu Park', founded: 2012, coach: 'Alieu Touray', color: '#c0392b', competitionIds: ['zone-upper'] },
   // Women's 1st extras + 2nd
-  { id: 'banjul-w', name: 'Banjul Ladies', shortName: 'Banjul L', city: 'Banjul', stadium: 'Box Bar Ladies', founded: 2012, coach: 'Isatou Jallow', color: '#e91e63', competitionIds: ['gfa-women-1'] },
-  { id: 'sk-ladies', name: 'Serrekunda Ladies', shortName: 'SK Ladies', city: 'Serrekunda', stadium: 'SK Women Ground', founded: 2014, coach: 'Mariama Ceesay', color: '#9c27b0', competitionIds: ['gfa-women-1'] },
-  { id: 'bakau-w', name: 'Bakau Girls', shortName: 'Bakau G', city: 'Bakau', stadium: 'Bakau Girls Field', founded: 2016, coach: 'Awa Bah', color: '#00bcd4', competitionIds: ['gfa-women-2'] },
-  { id: 'brikama-w', name: 'Brikama Women', shortName: 'Brikama W', city: 'Brikama', stadium: 'Brikama Women', founded: 2015, coach: 'Fatou Touray', color: '#ff5722', competitionIds: ['gfa-women-2'] },
-  { id: 'faraba-w', name: 'Faraba Ladies', shortName: 'Faraba', city: 'Faraba', stadium: 'Faraba Pitch', founded: 2018, coach: 'Ndey Sowe', color: '#4caf50', competitionIds: ['gfa-women-2'] },
-  { id: 'gunjur-w', name: 'Gunjur Women', shortName: 'Gunjur W', city: 'Gunjur', stadium: 'Gunjur Women', founded: 2017, coach: 'Kaddy Camara', color: '#795548', competitionIds: ['gfa-women-2'] },
+  { id: 'banjul-w', name: 'Banjul Ladies', shortName: 'Banjul L', city: 'Banjul', stadium: 'Box Bar Ladies', founded: 2012, coach: 'Isatou Jallow', color: '#e91e63', competitionIds: ['gff-women-1'] },
+  { id: 'sk-ladies', name: 'Serrekunda Ladies', shortName: 'SK Ladies', city: 'Serrekunda', stadium: 'SK Women Ground', founded: 2014, coach: 'Mariama Ceesay', color: '#9c27b0', competitionIds: ['gff-women-1'] },
+  { id: 'bakau-w', name: 'Bakau Girls', shortName: 'Bakau G', city: 'Bakau', stadium: 'Bakau Girls Field', founded: 2016, coach: 'Awa Bah', color: '#00bcd4', competitionIds: ['gff-women-2'] },
+  { id: 'brikama-w', name: 'Brikama Women', shortName: 'Brikama W', city: 'Brikama', stadium: 'Brikama Women', founded: 2015, coach: 'Fatou Touray', color: '#ff5722', competitionIds: ['gff-women-2'] },
+  { id: 'faraba-w', name: 'Faraba Ladies', shortName: 'Faraba', city: 'Faraba', stadium: 'Faraba Pitch', founded: 2018, coach: 'Ndey Sowe', color: '#4caf50', competitionIds: ['gff-women-2'] },
+  { id: 'gunjur-w', name: 'Gunjur Women', shortName: 'Gunjur W', city: 'Gunjur', stadium: 'Gunjur Women', founded: 2017, coach: 'Kaddy Camara', color: '#795548', competitionIds: ['gff-women-2'] },
   // U20
-  { id: 'u20-banjul', name: 'Banjul U20', shortName: 'Banjul U20', city: 'Banjul', stadium: 'Youth Arena', founded: 2019, coach: 'Alieu Fadera', color: '#CE1126', competitionIds: ['gfa-u20'] },
-  { id: 'u20-west', name: 'West Coast U20', shortName: 'WC U20', city: 'Brikama', stadium: 'Youth West', founded: 2019, coach: 'Pa Modou Jagne', color: '#0C1C8C', competitionIds: ['gfa-u20'] },
-  { id: 'u20-north', name: 'North Bank U20', shortName: 'NB U20', city: 'Kerewan', stadium: 'Youth North', founded: 2020, coach: 'Assan Ceesay', color: '#3A7728', competitionIds: ['gfa-u20'] },
-  { id: 'u20-upper', name: 'Upper River U20', shortName: 'UR U20', city: 'Basse', stadium: 'Youth Upper', founded: 2020, coach: 'Musa Barrow', color: '#e67e22', competitionIds: ['gfa-u20'] },
+  { id: 'u20-banjul', name: 'Banjul U20', shortName: 'Banjul U20', city: 'Banjul', stadium: 'Youth Arena', founded: 2019, coach: 'Alieu Fadera', color: '#CE1126', competitionIds: ['gff-u20'] },
+  { id: 'u20-west', name: 'West Coast U20', shortName: 'WC U20', city: 'Brikama', stadium: 'Youth West', founded: 2019, coach: 'Pa Modou Jagne', color: '#0C1C8C', competitionIds: ['gff-u20'] },
+  { id: 'u20-north', name: 'North Bank U20', shortName: 'NB U20', city: 'Kerewan', stadium: 'Youth North', founded: 2020, coach: 'Assan Ceesay', color: '#3A7728', competitionIds: ['gff-u20'] },
+  { id: 'u20-upper', name: 'Upper River U20', shortName: 'UR U20', city: 'Basse', stadium: 'Youth Upper', founded: 2020, coach: 'Musa Barrow', color: '#e67e22', competitionIds: ['gff-u20'] },
 ]
 
 const FIRST_NAMES_M = [
@@ -292,15 +292,15 @@ function pairMatches(
 export function buildExtraMatches(today: string): Match[] {
   const groups: { comp: string; teams: string[] }[] = [
     {
-      comp: 'gfa-men-1',
+      comp: 'gff-men-1',
       teams: ['bombada', 'steve-b', 'gpasa', 'marimoo', 'rdb', 'hawks'],
     },
     {
-      comp: 'gfa-men-2',
+      comp: 'gff-men-2',
       teams: ['banjul-u', 'serrekunda', 'kololi', 'bakau', 'fajara', 'latrikunda', 'team-bj', 'armed'],
     },
     {
-      comp: 'gfa-men-3',
+      comp: 'gff-men-3',
       teams: ['brufut', 'sukuta', 'busumbala', 'wellingara', 'talinding', 'jabang'],
     },
     {
@@ -320,15 +320,15 @@ export function buildExtraMatches(today: string): Match[] {
       teams: ['basse', 'bansang', 'fatoto', 'diabugu'],
     },
     {
-      comp: 'gfa-women-1',
+      comp: 'gff-women-1',
       teams: ['banjul-w', 'sk-ladies', 'queen-c', 'red-sab'],
     },
     {
-      comp: 'gfa-women-2',
+      comp: 'gff-women-2',
       teams: ['bakau-w', 'brikama-w', 'faraba-w', 'gunjur-w'],
     },
     {
-      comp: 'gfa-u20',
+      comp: 'gff-u20',
       teams: ['u20-banjul', 'u20-west', 'u20-north', 'u20-upper'],
     },
   ]
@@ -396,9 +396,9 @@ export function buildExtraStandings(): Record<string, StandingRow[]> {
   }
   // also include some core teams that appear in expanded match lists
   const coreAdds: Record<string, string[]> = {
-    'gfa-men-1': ['rdb', 'hawks', 'fortune', 'brikama', 'wallidan', 'gamtel'],
-    'gfa-men-2': ['team-bj', 'armed'],
-    'gfa-women-1': ['queen-c', 'red-sab', 'police-w', 'gambia-p'],
+    'gff-men-1': ['rdb', 'hawks', 'fortune', 'brikama', 'wallidan', 'gamtel'],
+    'gff-men-2': ['team-bj', 'armed'],
+    'gff-women-1': ['queen-c', 'red-sab', 'police-w', 'gambia-p'],
   }
   for (const [c, ids] of Object.entries(coreAdds)) {
     const list = byComp.get(c) ?? []
@@ -436,10 +436,10 @@ export function buildExtraNews(today: string): NewsArticle[] {
     },
     {
       title: 'North Bank clubs push for promotion pathway clarity',
-      body: 'Chairmen from Kerewan, Farafenni and Fass met GFA officials in Banjul to discuss how zonal champions feed into the national third division.',
+      body: 'Chairmen from Kerewan, Farafenni and Fass met GFF officials in Banjul to discuss how zonal champions feed into the national third division.',
       category: 'League News',
       author: 'Goal GM Desk',
-      competitionIds: ['zone-north', 'gfa-men-3'],
+      competitionIds: ['zone-north', 'gff-men-3'],
     },
     {
       title: 'Basse United light up Upper River night fixture',
@@ -455,15 +455,15 @@ export function buildExtraNews(today: string): NewsArticle[] {
       category: "Women's Football",
       author: 'Awa Njie',
       teamIds: ['faraba-w', 'gunjur-w'],
-      competitionIds: ['gfa-women-2'],
+      competitionIds: ['gff-women-2'],
     },
     {
       title: 'U-20 Championship: Banjul youth edge West Coast',
-      body: 'Banjul U20 beat West Coast U20 1-0 at the Youth Arena. The GFA says the tournament is key to Scorpions pathway planning.',
+      body: 'Banjul U20 beat West Coast U20 1-0 at the Youth Arena. The GFF says the tournament is key to Scorpions pathway planning.',
       category: 'League News',
       author: 'Fatou Jallow',
       teamIds: ['u20-banjul', 'u20-west'],
-      competitionIds: ['gfa-u20'],
+      competitionIds: ['gff-u20'],
     },
     {
       title: 'Steve Biko return to First Division contention',
@@ -471,22 +471,22 @@ export function buildExtraNews(today: string): NewsArticle[] {
       category: 'Match Reports',
       author: 'Omar Bah',
       teamIds: ['steve-b', 'marimoo'],
-      competitionIds: ['gfa-men-1'],
+      competitionIds: ['gff-men-1'],
     },
     {
       title: 'Transfer round-up: Second Division midfielders on the move',
       body: 'Serrekunda United and Kololi FC confirmed three domestic transfers ahead of the mid-season window. Full tagged profiles are live on Goal GM.',
       category: 'Transfers',
       author: 'Lamin Ceesay',
-      competitionIds: ['gfa-men-2'],
+      competitionIds: ['gff-men-2'],
       teamIds: ['serrekunda', 'kololi'],
     },
     {
       title: 'Independence Stadium set for women’s double-header',
-      body: 'The GFA announced a women’s double-header at Independence Stadium featuring Queens College and Banjul Ladies — Watch Live links will appear in Goal GM.',
+      body: 'The GFF announced a women’s double-header at Independence Stadium featuring Queens College and Banjul Ladies — Watch Live links will appear in Goal GM.',
       category: "Women's Football",
       author: 'Goal GM Desk',
-      competitionIds: ['gfa-women-1'],
+      competitionIds: ['gff-women-1'],
       teamIds: ['queen-c', 'banjul-w'],
       featured: true,
     },
@@ -504,7 +504,7 @@ export function buildExtraNews(today: string): NewsArticle[] {
       category: 'Match Reports',
       author: 'Mariama Bah',
       teamIds: ['gpasa', 'bombada'],
-      competitionIds: ['gfa-men-1'],
+      competitionIds: ['gff-men-1'],
     },
   ]
 

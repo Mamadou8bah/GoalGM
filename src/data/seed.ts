@@ -21,9 +21,9 @@ import { playerPhotoUrl } from './playerPhotos'
 
 const coreCompetitions: Competition[] = [
   {
-    id: 'gfa-men-1',
-    name: 'GFA League First Division',
-    shortName: 'GFA First Division',
+    id: 'gff-men-1',
+    name: 'GFF League First Division',
+    shortName: 'GFF First Division',
     gender: 'men',
     division: '1st',
     season: '2025/26',
@@ -32,9 +32,9 @@ const coreCompetitions: Competition[] = [
     zones: { champions: 1, relegation: 2 },
   },
   {
-    id: 'gfa-men-2',
-    name: 'GFA League Second Division',
-    shortName: 'GFA Second Division',
+    id: 'gff-men-2',
+    name: 'GFF League Second Division',
+    shortName: 'GFF Second Division',
     gender: 'men',
     division: '2nd',
     season: '2025/26',
@@ -43,7 +43,7 @@ const coreCompetitions: Competition[] = [
     zones: { promotion: 2, relegation: 2 },
   },
   {
-    id: 'gfa-women-1',
+    id: 'gff-women-1',
     name: "Women's First Division",
     shortName: "Women's First Div",
     gender: 'women',
@@ -54,9 +54,9 @@ const coreCompetitions: Competition[] = [
     zones: { champions: 1 },
   },
   {
-    id: 'gfa-men-3',
-    name: 'GFA League Third Division',
-    shortName: 'GFA Third Division',
+    id: 'gff-men-3',
+    name: 'GFF League Third Division',
+    shortName: 'GFF Third Division',
     gender: 'men',
     division: '3rd',
     season: '2025/26',
@@ -94,7 +94,7 @@ const coreTeams: Team[] = [
     coach: 'Alhagie Sowe',
     color: '#CE1126',
     logoUrl: teamLogo('rdb'),
-    competitionIds: ['gfa-men-1'],
+    competitionIds: ['gff-men-1'],
   },
   {
     id: 'hawks',
@@ -106,7 +106,7 @@ const coreTeams: Team[] = [
     coach: 'Modou Lamin Colley',
     color: '#0C1C8C',
     logoUrl: teamLogo('hawks'),
-    competitionIds: ['gfa-men-1'],
+    competitionIds: ['gff-men-1'],
   },
   {
     id: 'fortune',
@@ -118,7 +118,7 @@ const coreTeams: Team[] = [
     coach: 'Sang Ndong',
     color: '#3A7728',
     logoUrl: teamLogo('fortune'),
-    competitionIds: ['gfa-men-1'],
+    competitionIds: ['gff-men-1'],
   },
   {
     id: 'brikama',
@@ -130,7 +130,7 @@ const coreTeams: Team[] = [
     coach: 'Omar Colley',
     color: '#e67e22',
     logoUrl: teamLogo('brikama'),
-    competitionIds: ['gfa-men-1'],
+    competitionIds: ['gff-men-1'],
   },
   {
     id: 'wallidan',
@@ -142,7 +142,7 @@ const coreTeams: Team[] = [
     coach: 'Mustapha Kebbeh',
     color: '#1abc9c',
     logoUrl: teamLogo('wallidan'),
-    competitionIds: ['gfa-men-1'],
+    competitionIds: ['gff-men-1'],
   },
   {
     id: 'gamtel',
@@ -154,7 +154,7 @@ const coreTeams: Team[] = [
     coach: 'Ebou Faye',
     color: '#8e44ad',
     logoUrl: teamLogo('gamtel'),
-    competitionIds: ['gfa-men-1'],
+    competitionIds: ['gff-men-1'],
   },
   {
     id: 'team-bj',
@@ -166,7 +166,7 @@ const coreTeams: Team[] = [
     coach: 'Lamin Jallow',
     color: '#2980b9',
     logoUrl: teamLogo('team-bj'),
-    competitionIds: ['gfa-men-2'],
+    competitionIds: ['gff-men-2'],
   },
   {
     id: 'armed',
@@ -178,7 +178,7 @@ const coreTeams: Team[] = [
     coach: 'Pa Alieu Ndow',
     color: '#2c3e50',
     logoUrl: teamLogo('armed'),
-    competitionIds: ['gfa-men-2'],
+    competitionIds: ['gff-men-2'],
   },
   {
     id: 'queen-c',
@@ -190,7 +190,7 @@ const coreTeams: Team[] = [
     coach: 'Fatou Ceesay',
     color: '#CE1126',
     logoUrl: teamLogo('queen-c'),
-    competitionIds: ['gfa-women-1'],
+    competitionIds: ['gff-women-1'],
   },
   {
     id: 'red-sab',
@@ -202,7 +202,7 @@ const coreTeams: Team[] = [
     coach: 'Awa Njie',
     color: '#c0392b',
     logoUrl: teamLogo('red-sab'),
-    competitionIds: ['gfa-women-1'],
+    competitionIds: ['gff-women-1'],
   },
   {
     id: 'police-w',
@@ -214,7 +214,7 @@ const coreTeams: Team[] = [
     coach: 'Mariama Barrow',
     color: '#0C1C8C',
     logoUrl: teamLogo('police-w'),
-    competitionIds: ['gfa-women-1'],
+    competitionIds: ['gff-women-1'],
   },
   {
     id: 'gambia-p',
@@ -226,7 +226,7 @@ const coreTeams: Team[] = [
     coach: 'Isatou Camara',
     color: '#3A7728',
     logoUrl: teamLogo('gambia-p'),
-    competitionIds: ['gfa-women-1'],
+    competitionIds: ['gff-women-1'],
   },
 ]
 
@@ -441,7 +441,7 @@ export const PROTOTYPE_TODAY = '2026-09-26'
 const coreMatches: Match[] = [
   {
     id: 'm1',
-    competitionId: 'gfa-men-1',
+    competitionId: 'gff-men-1',
     round: 8,
     homeTeamId: 'rdb',
     awayTeamId: 'hawks',
@@ -488,7 +488,7 @@ const coreMatches: Match[] = [
   },
   {
     id: 'm2',
-    competitionId: 'gfa-men-1',
+    competitionId: 'gff-men-1',
     round: 8,
     homeTeamId: 'fortune',
     awayTeamId: 'brikama',
@@ -502,7 +502,7 @@ const coreMatches: Match[] = [
   },
   {
     id: 'm3',
-    competitionId: 'gfa-men-1',
+    competitionId: 'gff-men-1',
     round: 8,
     homeTeamId: 'wallidan',
     awayTeamId: 'gamtel',
@@ -543,7 +543,7 @@ const coreMatches: Match[] = [
   },
   {
     id: 'm4',
-    competitionId: 'gfa-women-1',
+    competitionId: 'gff-women-1',
     round: 5,
     homeTeamId: 'queen-c',
     awayTeamId: 'red-sab',
@@ -584,7 +584,7 @@ const coreMatches: Match[] = [
   },
   {
     id: 'm5',
-    competitionId: 'gfa-men-2',
+    competitionId: 'gff-men-2',
     round: 6,
     homeTeamId: 'team-bj',
     awayTeamId: 'armed',
@@ -598,7 +598,7 @@ const coreMatches: Match[] = [
   },
   {
     id: 'm6',
-    competitionId: 'gfa-men-1',
+    competitionId: 'gff-men-1',
     round: 7,
     homeTeamId: 'hawks',
     awayTeamId: 'fortune',
@@ -623,7 +623,7 @@ const coreMatches: Match[] = [
   },
   {
     id: 'm7',
-    competitionId: 'gfa-men-1',
+    competitionId: 'gff-men-1',
     round: 7,
     homeTeamId: 'brikama',
     awayTeamId: 'rdb',
@@ -640,7 +640,7 @@ const coreMatches: Match[] = [
   },
   {
     id: 'm8',
-    competitionId: 'gfa-women-1',
+    competitionId: 'gff-women-1',
     round: 4,
     homeTeamId: 'police-w',
     awayTeamId: 'gambia-p',
@@ -654,7 +654,7 @@ const coreMatches: Match[] = [
   },
   {
     id: 'm9',
-    competitionId: 'gfa-men-1',
+    competitionId: 'gff-men-1',
     round: 8,
     homeTeamId: 'gamtel',
     awayTeamId: 'rdb',
@@ -668,7 +668,7 @@ const coreMatches: Match[] = [
   },
   {
     id: 'm10',
-    competitionId: 'gfa-men-1',
+    competitionId: 'gff-men-1',
     round: 8,
     homeTeamId: 'hawks',
     awayTeamId: 'wallidan',
@@ -682,7 +682,7 @@ const coreMatches: Match[] = [
   },
   {
     id: 'm11',
-    competitionId: 'gfa-men-1',
+    competitionId: 'gff-men-1',
     round: 6,
     homeTeamId: 'rdb',
     awayTeamId: 'fortune',
@@ -701,7 +701,7 @@ const coreMatches: Match[] = [
   },
   {
     id: 'm12',
-    competitionId: 'gfa-men-1',
+    competitionId: 'gff-men-1',
     round: 5,
     homeTeamId: 'hawks',
     awayTeamId: 'rdb',
@@ -722,7 +722,7 @@ const coreMatches: Match[] = [
 export const matches: Match[] = [...coreMatches, ...buildExtraMatches(PROTOTYPE_TODAY)]
 
 const coreStandings: Record<string, StandingRow[]> = {
-  'gfa-men-1': [
+  'gff-men-1': [
     { teamId: 'rdb', played: 7, won: 5, drawn: 1, lost: 1, gf: 14, ga: 6, gd: 8, pts: 16, form: ['W', 'W', 'D', 'W', 'W'] },
     { teamId: 'hawks', played: 7, won: 4, drawn: 2, lost: 1, gf: 11, ga: 7, gd: 4, pts: 14, form: ['D', 'W', 'W', 'L', 'W'] },
     { teamId: 'fortune', played: 7, won: 4, drawn: 1, lost: 2, gf: 10, ga: 8, gd: 2, pts: 13, form: ['D', 'L', 'W', 'W', 'W'] },
@@ -730,13 +730,13 @@ const coreStandings: Record<string, StandingRow[]> = {
     { teamId: 'brikama', played: 7, won: 2, drawn: 2, lost: 3, gf: 7, ga: 9, gd: -2, pts: 8, form: ['L', 'D', 'W', 'L', 'D'] },
     { teamId: 'gamtel', played: 6, won: 1, drawn: 2, lost: 3, gf: 5, ga: 8, gd: -3, pts: 5, form: ['L', 'D', 'L', 'D', 'W'] },
   ],
-  'gfa-women-1': [
+  'gff-women-1': [
     { teamId: 'queen-c', played: 4, won: 3, drawn: 1, lost: 0, gf: 8, ga: 2, gd: 6, pts: 10, form: ['W', 'W', 'D', 'W'] },
     { teamId: 'police-w', played: 4, won: 3, drawn: 0, lost: 1, gf: 7, ga: 3, gd: 4, pts: 9, form: ['W', 'W', 'L', 'W'] },
     { teamId: 'red-sab', played: 4, won: 1, drawn: 1, lost: 2, gf: 4, ga: 5, gd: -1, pts: 4, form: ['L', 'D', 'W', 'L'] },
     { teamId: 'gambia-p', played: 4, won: 0, drawn: 0, lost: 4, gf: 1, ga: 10, gd: -9, pts: 0, form: ['L', 'L', 'L', 'L'] },
   ],
-  'gfa-men-2': [
+  'gff-men-2': [
     { teamId: 'armed', played: 5, won: 3, drawn: 1, lost: 1, gf: 7, ga: 4, gd: 3, pts: 10, form: ['W', 'D', 'W', 'L', 'W'] },
     { teamId: 'team-bj', played: 5, won: 2, drawn: 2, lost: 1, gf: 6, ga: 5, gd: 1, pts: 8, form: ['D', 'W', 'D', 'W', 'L'] },
   ],
@@ -746,21 +746,21 @@ export const standingsByCompetition: Record<string, StandingRow[]> = {
   ...buildExtraStandings(),
   ...coreStandings,
   // keep core First Division order preferred for demo
-  'gfa-men-1': [
-    ...coreStandings['gfa-men-1'],
-    ...(buildExtraStandings()['gfa-men-1'] ?? []).filter(
+  'gff-men-1': [
+    ...coreStandings['gff-men-1'],
+    ...(buildExtraStandings()['gff-men-1'] ?? []).filter(
       (r) => !['rdb', 'hawks', 'fortune', 'wallidan', 'brikama', 'gamtel'].includes(r.teamId),
     ),
   ],
-  'gfa-men-2': [
-    ...coreStandings['gfa-men-2'],
-    ...(buildExtraStandings()['gfa-men-2'] ?? []).filter(
+  'gff-men-2': [
+    ...coreStandings['gff-men-2'],
+    ...(buildExtraStandings()['gff-men-2'] ?? []).filter(
       (r) => !['armed', 'team-bj'].includes(r.teamId),
     ),
   ],
-  'gfa-women-1': [
-    ...coreStandings['gfa-women-1'],
-    ...(buildExtraStandings()['gfa-women-1'] ?? []).filter(
+  'gff-women-1': [
+    ...coreStandings['gff-women-1'],
+    ...(buildExtraStandings()['gff-women-1'] ?? []).filter(
       (r) => !['queen-c', 'police-w', 'red-sab', 'gambia-p'].includes(r.teamId),
     ),
   ],
@@ -778,11 +778,11 @@ const coreNews: NewsArticle[] = [
     imageUrl: '/images/news/gambia-v-guinea.jpg',
     featured: true,
     teamIds: ['rdb', 'hawks'],
-    competitionIds: ['gfa-men-1'],
+    competitionIds: ['gff-men-1'],
   },
   {
     id: 'n2',
-    title: 'Yankuba Minteh linked with return to GFA First Division',
+    title: 'Yankuba Minteh linked with return to GFF First Division',
     body: 'Transfer chatter intensified this week as Real de Banjul were linked with a short-term deal for midfielder Yankuba Minteh. Club officials declined to confirm talks, saying only that the squad list remains open until the window closes.\n\nAny move would be among the biggest domestic stories of the 2025/26 season.',
     category: 'Transfers',
     author: 'Lamin Ceesay',
@@ -791,7 +791,7 @@ const coreNews: NewsArticle[] = [
     imageUrl: '/images/news/independence-stadium.jpg',
     playerIds: ['rdb8'],
     teamIds: ['rdb'],
-    competitionIds: ['gfa-men-1'],
+    competitionIds: ['gff-men-1'],
   },
   {
     id: 'n3',
@@ -803,18 +803,18 @@ const coreNews: NewsArticle[] = [
     imageColor: '#3A7728',
     imageUrl: '/images/news/independence-stadium-2.jpg',
     teamIds: ['queen-c', 'red-sab'],
-    competitionIds: ['gfa-women-1'],
+    competitionIds: ['gff-women-1'],
   },
   {
     id: 'n4',
-    title: 'GFA confirms Mid-Season Cup draw for December',
+    title: 'GFF confirms Mid-Season Cup draw for December',
     body: 'The Gambia Football Federation announced the Mid-Season Cup will kick off in early December, featuring clubs from the First and Second Divisions. Full fixtures will be published on Goal GM once the draw is finalised.',
     category: 'League News',
     author: 'Goal GM Desk',
     publishedAt: '2026-09-24T09:30:00+00:00',
     imageColor: '#2c3e50',
     imageUrl: '/images/news/banjul-boxbar.jpg',
-    competitionIds: ['gfa-men-1', 'gfa-men-2'],
+    competitionIds: ['gff-men-1', 'gff-men-2'],
   },
 ]
 

@@ -63,9 +63,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [favouriteCompetitionIds, setFavouriteCompetitionIds] = useState<string[]>(() => {
     try {
       const raw = localStorage.getItem(FAV_COMP_KEY)
-      return raw ? (JSON.parse(raw) as string[]) : ['gfa-men-1']
+      return raw ? (JSON.parse(raw) as string[]) : ['gff-men-1']
     } catch {
-      return ['gfa-men-1']
+      return ['gff-men-1']
     }
   })
 

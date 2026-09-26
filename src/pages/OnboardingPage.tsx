@@ -10,10 +10,10 @@ export function OnboardingPage() {
   const navigate = useNavigate()
   const [step, setStep] = useState(0)
   const [selectedTeams, setSelectedTeams] = useState<string[]>(['rdb'])
-  const [selectedComps, setSelectedComps] = useState<string[]>(['gfa-men-1'])
+  const [selectedComps, setSelectedComps] = useState<string[]>(['gff-men-1'])
 
   const featuredTeams = useMemo(
-    () => teams.filter((t) => t.competitionIds.includes('gfa-men-1') || t.competitionIds.includes('gfa-women-1')),
+    () => teams.filter((t) => t.competitionIds.includes('gff-men-1') || t.competitionIds.includes('gff-women-1')),
     [teams],
   )
 
