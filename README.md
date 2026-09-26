@@ -43,6 +43,12 @@ Clickable React demo with mock data (not Flutter/Firebase production).
 
 News photos are from Wikimedia Commons (Independence Stadium Bakau, Gambia v Guinea, Banjul). Team crests and player avatars use Gambian flag colours.
 
+## Deploy (Netlify)
+
+Publish directory: `dist`. Build command: `npm run build`.
+
+SPA redirects are configured (`netlify.toml` + `public/_redirects`) so `/app`, `/admin`, and deep links work on refresh.
+
 ## Stack
 
 React + TypeScript + Vite + React Router
